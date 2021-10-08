@@ -13,7 +13,9 @@ weatherForm.addEventListener('submit', (e) => {
 
     e.preventDefault() // prevents page refresh on a listener event
     const location = search.value
-    const url = `http://localhost:3000/weather?address=${location}`
+    // const url = `http://localhost:3000/weather?address=${location}`
+    // for Heroku deployment
+    const url = `/weather?address=${location}`
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
